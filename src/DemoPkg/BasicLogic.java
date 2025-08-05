@@ -1,5 +1,8 @@
 package DemoPkg;
 import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class BasicLogic {
     public static int getMaxElement(int [] arr) {
         int max = Integer.MIN_VALUE;
@@ -52,5 +55,78 @@ public class BasicLogic {
            sum+= 1<<arr[i];
         }
         return sum;
+    }
+    public static boolean isPrime(int num){
+        boolean res=true ;
+        for(int i=2;i<=num/2;i++){
+            if(num%i==0) {
+                res = false;
+                break;
+            }
+        }
+        return res;
+    }
+
+    public static List<Integer> closestPrimeNumber(int num){
+       List<Integer> li = new ArrayList<>();
+        int temp1=num;
+       int temp2=num;
+       int count1=0;
+       int count2=0;
+       if(isPrime(num))
+       {
+           li.add(num);
+           return li;
+            }
+       while(!isPrime(temp1)){
+           temp1--;
+           count1++;
+       }
+        while(!isPrime(temp2)){
+            temp2++;
+            count2++;
+        }
+       if(count1>count2){
+           li.add(temp2);
+       }
+       else if(count1<count2){
+           li.add(temp1);
+       }
+       else {
+           li.add(temp1);
+           li.add(temp2);
+       }
+       return li;
+    }
+
+    public static List<Integer> closestPrimeNumberSingleLoop(int num){
+        List<Integer> li = new ArrayList<>();
+        boolean left=false;
+        boolean right =false;
+        if(isPrime(num))
+        {
+            li.add(num);
+            return li;
+        }
+        int i = 1;
+       while(i<=num){
+           left = isPrime(num+i);
+           right = isPrime(num-i);
+          if(left || right){
+              break;
+          }
+          i++;
+       }
+       if(left && right){
+           li.add(num-i);
+           li.add(num+i);
+       }
+       else if(left){
+           li.add(num+i);
+       }
+       else{
+           li.add(num-i);
+       }
+        return li;
     }
 }
