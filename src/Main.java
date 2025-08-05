@@ -5,8 +5,12 @@ import DemoPkg.BasicLogic;
 public class Main {
 
     public static void main(String[] args) {
-       int [] arr ={3,8,1,70,9,10};
-       int max = BasicLogic.getMaxElement(arr);
-        System.out.println("The max element is :"+ max);
+//       int [] arr ={3,8,1,70,9,10};
+//       int max = BasicLogic.getMaxElement(arr);
+//        System.out.println("The max element is :"+ max);
+//        int secondMax = BasicLogic.getSecondMaxElement(arr);
+//        System.out.println("The Second max element is :"+ secondMax);
+        int n=1344301;
+        BasicLogic.isPalindrom(n);
     }
 }
