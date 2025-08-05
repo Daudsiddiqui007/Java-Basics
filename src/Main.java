@@ -10,7 +10,11 @@ public class Main {
 //        System.out.println("The max element is :"+ max);
 //        int secondMax = BasicLogic.getSecondMaxElement(arr);
 //        System.out.println("The Second max element is :"+ secondMax);
-        int n=1344301;
-        BasicLogic.isPalindrom(n);
+//        int n=1344301;
+//        BasicLogic.isPalindrom(n);
+        int [] arr ={3,4,1,2,0,0};
+        int sum = BasicLogic.twoPowerSummationOfArrayUsingBitOperator(arr);
+        System.out.println("The Sum of 2 to the power of element :"+ sum);
+
     }
 }

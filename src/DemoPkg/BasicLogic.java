@@ -1,5 +1,5 @@
 package DemoPkg;
-
+import java.lang.*;
 public class BasicLogic {
     public static int getMaxElement(int [] arr) {
         int max = Integer.MIN_VALUE;
@@ -37,5 +37,20 @@ public class BasicLogic {
         else {
             System.out.println("Number is not palindrom!!!");
         }
+    }
+    public static double twoPowerSummationOfArray(int [] arr){
+        double sum=0;
+        for(int i=0;i<=arr.length-1;i++) {
+        double m = Math.pow(2,arr[i]);
+            sum += m;
+        }
+        return sum;
+    }
+    public static int twoPowerSummationOfArrayUsingBitOperator(int [] arr){
+        int sum=0;
+        for(int i=0;i<=arr.length-1;i++) {
+           sum+= 1<<arr[i];
+        }
+        return sum;
     }
 }
