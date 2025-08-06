@@ -129,4 +129,21 @@ public class BasicLogic {
        }
         return li;
     }
+    public static String toBinaryConvert(int num){
+        String binary="";
+        while(num>0){
+            binary =  (num%2)+binary ;
+            num /= 2;
+        }
+        return binary;
+    }
+
+    public static String toBinaryConvertWithBitWiseOperator(int num){
+        String binary="";
+        while(num > 0){
+           binary = (num & 1) + binary;
+           num >>= 1;
+        }
+        return binary;
+    }
 }

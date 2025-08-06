@@ -17,10 +17,15 @@ public class Main {
 //        int [] arr ={3,4,1,2,0,0};
 //        int sum = BasicLogic.twoPowerSummationOfArrayUsingBitOperator(arr);
 //        System.out.println("The Sum of 2 to the power of element :"+ sum);
-        int num=26;
+        int num=7;
         //System.out.println("Is Number Prime :" +BasicLogic.isPrime(num) );
 
-        List<Integer> primeNumber = BasicLogic.closestPrimeNumberSingleLoop(num);
-        System.out.println(primeNumber);
+//        List<Integer> primeNumber = BasicLogic.closestPrimeNumberSingleLoop(num);
+//        System.out.println(primeNumber);
+//        String bin = BasicLogic.toBinaryConvert(num);
+//        System.out.println(bin);
+        String bin = BasicLogic.toBinaryConvertWithBitWiseOperator(num);
+        System.out.println(bin);
+
     }
 }
