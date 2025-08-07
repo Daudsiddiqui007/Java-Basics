@@ -21,6 +21,9 @@ public class LinkedList {
 
         //Creation of list with Data
         public void create(int data){
+            if(this.head!=null){
+                System.out.println("LinkedList Already created!!!");
+            }
             this.head = new Node(data);
             this.tail = this.head;
             this.size++;
